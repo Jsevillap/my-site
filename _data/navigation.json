@@ -1,0 +1,18 @@
+{
+  "about": {
+    "label": "About",
+    "href": "#about"
+  },
+  "projects": {
+    "label": "Projects",
+    "href": "#projects"
+  },
+  "skills": {
+    "label": "Skills",
+    "href": "#skills"
+  },
+  "contact": {
+    "label": "Talk to Me",
+    "href": "mailto:jesus.sevilla.pena@gmail.com"
+  }
+}

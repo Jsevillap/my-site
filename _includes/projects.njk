@@ -1,0 +1,44 @@
+<section class="container content-section projects-section" id="projects" tabindex="0">
+
+    <h2 class="big-title">Projects</h2>
+    <div class="project-grid">
+
+            {% for project in collections.project %}
+
+
+            <div class="project-card">
+                <div class="project-cover">
+                    <img src="{{ project.data.imgURL }}" alt="{{ project.data.description }}">
+                </div>
+                <div class="card-title-type">
+                    <h4>{{ project.data.title }}</h4>
+                    <p class="card-type color-text">{{ project.data.type }}</p>
+                </div>
+
+                <p class="card-description">{{ project.data.description }}</p>
+                <div class="card-tech-stack">
+                    {{ project.data.tech }}
+                </div>
+
+                <div class="card-buttons">
+                    <a class="button" href="{{ project.data.url }}" target="_blank">View Live Demo</a>
+                    <a class="button button-white" href="{{ project.data.github }}" > <i class="lni lni-github-original" target="_blank"></i> View Code</a>
+                </div>
+            </div>
+            
+            
+            
+            {% endfor %}
+
+
+          
+
+          
+
+
+        
+
+
+    </div>
+
+</section>
