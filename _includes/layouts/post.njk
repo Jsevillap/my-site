@@ -1,0 +1,82 @@
+---
+layout: layouts/base.njk
+---
+
+<section class="container content-section">
+
+
+    
+
+    <article class="blog-container">
+
+                <picture>
+                        <source srcset="{{ image }}.webp" type="image/webp">
+                        <source srcset="{{ image }}.jpg" type="image/jpg">
+                        <img src="{{ image }}.jpg" alt="{{ imageDescription }}">
+                </picture>
+
+        
+        <div class="title-and-date">
+          <h1 class="blog-title">{{ title }}</h1>
+          <p class="color-text"> Posted on <time datetime="{{ date }}" > {{ date | readableDate }}</time></p>
+        </div>
+        
+        
+
+        {{ content | safe }}
+
+    </article>
+
+    
+
+</section>
+
+<script>
+
+  const copyButton = document.querySelectorAll(".code-copy-button");
+
+  copyButton.forEach(function(button) {
+
+
+       button.addEventListener("click", function(){
+
+          updateClipboard(this.nextElementSibling.innerText, this)
+
+      
+
+
+        });
+  
+
+  
+  })
+
+ 
+
+
+  function updateClipboard(newClip, element) {
+      navigator.clipboard.writeText(newClip).then(function() {
+
+          /* clipboard successfully set */
+          element.innerText = "Copied!";
+
+          setTimeout(()=>{
+            element.innerText = "copy";
+          }, 5000)
+
+      }, function(e) {
+          //catch error
+          console.log(e)
+
+
+      });
+  }
+
+
+
+
+
+
+
+
+</script>

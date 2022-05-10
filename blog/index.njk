@@ -1,0 +1,54 @@
+---
+title: Blog
+description: Jesus Sevilla Blog
+layout: layouts/blog.njk
+image: /assets/jesus-sevilla-profile.jpg
+---
+
+<div class="blog-container">
+    
+<h1 class="big-title">{{title}}</h1>
+
+{% for post in collections.post | reverse %}
+
+    <article class="blog-post">
+
+        <div class="blog-image">
+
+                <picture>
+                        <source srcset="{{ post.data.image }}.webp" type="image/webp">
+                        <source srcset="{{ post.data.image }}.jpg" type="image/jpg">
+                        <img src="{{ post.data.image }}.jpg" alt="{{ post.data.imageDescription }}">
+                </picture>
+
+        </div>
+
+        <div class="blog-info">
+            <div class="blog-title-description">
+                <h2>
+                <a href="{{ post.url }}"> {{ post.data.title }} </a>
+                </h2>
+                <p> {{ post.data.description }} </p>
+
+            </div>
+            <p class="color-text"> Posted on <time datetime="{{ post.data.date }}" > {{ post.data.date | readableDate }}</time></p>
+
+            <div class="blog-tags">
+
+                {% for subject in post.data.subjects %}
+
+                <span> {{ subject }}</span>
+
+                {% endfor %}
+            </div>
+
+        </div>
+
+        
+
+    </article>
+
+
+{% endfor %}
+
+</div>

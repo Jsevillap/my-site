@@ -2,4 +2,4 @@
 
 ## This is my own personal site
 
-I built this site using `Eleventy` and `Nunjucks`
+I built this site using `Eleventy` and `Nunjucks` and of course `HTML`, `CSS` and `Javascript`
