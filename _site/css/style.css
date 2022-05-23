@@ -740,6 +740,7 @@ footer {
   transform: translateX(-50%);
   display: flex;
   justify-content: space-between;
+  align-items: center;
   background-image: linear-gradient(
     var(--primary-bg-color-opacity),
     var(--primary-bg-color) 30%
