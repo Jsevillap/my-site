@@ -162,6 +162,8 @@ h6 {
 
 a {
   transition: color var(--transition);
+  color: var(--text-color);
+  text-decoration: none;
 }
 
 a:focus {
@@ -218,7 +220,8 @@ section {
 .container {
   width: 100%;
   max-width: 1400px;
-  padding-inline: 3rem;
+  padding-left: 3rem;
+  padding-right: 3rem;
   margin: 0 auto;
 }
 
@@ -268,7 +271,8 @@ section {
 
 @media screen and (max-width: 650px) {
   .container {
-    padding-inline: 1.5rem;
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
   }
 }
 
@@ -287,7 +291,7 @@ nav {
   flex-wrap: wrap;
   justify-content: space-between;
   align-items: center;
-  padding-block: 2rem;
+  padding: 2rem 0rem;
 }
 
 .logo-nav svg {
