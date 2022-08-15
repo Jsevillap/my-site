@@ -17,8 +17,6 @@ window.onload = (e) => {
 
 //Hide navbar on scroll
 window.onscroll = (e) => {
-  console.log(document.documentElement.scrollTop);
-
   if (document.documentElement.scrollTop > scrollValue) {
     /* collapse menu on mobile when hidding it */
     menu.classList.remove("active");

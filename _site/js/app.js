@@ -17,11 +17,11 @@ window.onload = (e) => {
 
 //Hide navbar on scroll
 window.onscroll = (e) => {
-  console.log(document.documentElement.scrollTop);
-
   if (document.documentElement.scrollTop > scrollValue) {
+    /* collapse menu on mobile when hidding it */
     menu.classList.remove("active");
     menuToggler.classList.remove("active");
+    /* /collapse menu on mobile when hidding it */
     header.classList.add("hidden");
     scrollValue = document.documentElement.scrollTop;
   } else {
@@ -30,6 +30,7 @@ window.onscroll = (e) => {
   }
 };
 
+//Show navbar when focused to help with tab navigation
 navBar.addEventListener("focus", (e) => {
   if (header.classList.contains("hidden")) {
     header.classList.remove("hidden");
