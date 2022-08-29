@@ -371,13 +371,17 @@ header.hidden {
 }
 
 @media screen and (max-width: 650px) {
+  nav {
+    padding: 1rem 0;
+  }
+
   .main-navigation {
     background-color: var(--primary-bg-color);
     flex-basis: 100%;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    margin-top: 1rem;
+    margin-top: 0;
     max-height: 0px;
     visibility: hidden;
     opacity: 0;
@@ -396,6 +400,7 @@ header.hidden {
   }
 
   .main-navigation.active {
+    margin-top: 1rem;
     max-height: 1000px;
     visibility: visible;
     opacity: 1;
