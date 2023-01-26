@@ -5,6 +5,8 @@ const animatedText = document.querySelectorAll(".is-animated");
 const header = document.querySelector("header");
 const navBar = document.querySelector("nav");
 const preLoader = document.querySelector(".pre-loader");
+const year = new Date();
+const yearDisplay = document.querySelector("#copy-year");
 let scrollValue = document.documentElement.scrollTop;
 
 //Remove Pre Loader
@@ -75,3 +77,5 @@ const createSplitText = (element) => {
 animatedText.forEach((text) => {
   createSplitText(text);
 });
+
+yearDisplay.innerHTML = year.getFullYear();
